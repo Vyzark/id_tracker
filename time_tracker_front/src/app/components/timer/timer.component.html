@@ -1,0 +1,31 @@
+<div class="wrapper mx-auto p-5 shadow">
+    <div class="one pb-5">
+        <input name="state" type="button" id="reset" checked (click)="stopTimer()"
+            [disabled]="!isPaused" />
+        <input name="state" type="button" id="pause" (click)="pauseTimer()" />
+        <input name="state" type="button" id="resume" (click)="resumeTimer()" />
+        <input name="state" type="button" id="play" (click)="startTimer()" />
+        <div class="shadow timer-container">
+            <span>
+                @if (timer) {
+                {{timer | async}}
+                } @else if (resumeTimerFrom && isPaused) {
+                {{resumeTimerFrom}}
+                } @else {
+                {{resetTimer}}
+                }
+            </span>
+        </div>
+        <div id="controls">
+            <label for="reset" id="reset--btn" [inert]="!isPaused" class="shadow"></label>
+            <label for="pause" id="pause--btn" class="shadow"></label>
+            <label for="play" id="play--btn" [inert]="!isPaused" class="shadow"
+                [class]="{'hide-play-btn': !firstStart}"></label>
+            <label for="resume" id="resume--btn" [inert]="!isPaused" class="shadow"
+                [class]="{'hide-resume-btn': firstStart}"></label>
+        </div>
+        <div class="spinner">
+            <div class="loader" [class]="{'stop-spinner': isPaused}"></div>
+        </div>
+    </div>
+</div>

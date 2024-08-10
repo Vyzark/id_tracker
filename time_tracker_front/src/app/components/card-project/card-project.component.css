@@ -1,0 +1,23 @@
+.activo{
+    color: green;
+}
+.inactivo{
+    color: red;
+}
+.card{
+    padding: 10px;
+        background-color: var(--color-background);
+        border: 5px solid var(--color-secondary);
+        margin: 10px;
+    
+        & h3 {
+            border-bottom: 1px solid #333;
+        }
+}
+button{
+    border: 2px solid #333;
+    background-color: var(--color-background);
+    border-radius: 10px;
+    width: 200px;
+    margin: 0 auto;
+}

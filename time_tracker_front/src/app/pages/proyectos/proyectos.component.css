@@ -1,0 +1,16 @@
+/* proyectos.component.css */
+
+.bg{
+  background-color: var(--color-background);
+}
+
+h1{
+  border-bottom:1px solid var(--dark-skyblue);
+}
+.form-group{
+  padding: 10px;
+}
+.error{
+  color: red;
+  padding: 5px;
+}

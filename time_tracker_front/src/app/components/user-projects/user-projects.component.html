@@ -1,0 +1,29 @@
+
+
+<div class="box container rounded p-1 col-12 col-md-12 ">
+    <h2 class="container justify-content-center p-2 d-flex">Mis proyectos</h2>
+    <hr class="mb-5">
+    <ul class="p-0 mb-5">
+        @if (arrProyectos) {
+        @for (proyecto of arrProyectos; track $index) {
+        <li class="card  mb-3">
+            <div class="card-body justify-content-center">
+                <h5 class="card-title">Proyecto: {{ proyecto.name }}</h5>
+                <hr>
+                <p class="card-text"> ID: {{ proyecto.id }}</p>
+                <p class="card-text">Fecha limite: {{ proyecto.limit_date | date:'dd-MM-yyyy'}}</p>
+                <p class="card-text">Fecha Creación: {{ proyecto.date | date:'dd-MM-yyyy' }}</p>
+                <p class="card-text">Horas dedicadas: {{ proyecto.hours_by_project }} horas</p>
+              @if (proyecto.is_active) {
+                <p class="estado card-text text-success text-">Estado: Activo</p>
+            }
+            @else {
+                <p class="estado card-text text-bg-danger">Estado: Inactivo</p>
+            }
+           
+            </div>
+        </li>
+        }
+    }
+    </ul>
+</div> 

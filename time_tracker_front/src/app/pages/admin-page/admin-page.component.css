@@ -1,0 +1,22 @@
+
+ h3{
+    padding: 30px 0;
+ }
+h1{
+    padding-top: 100px;
+}
+.top_project{
+    background-color: #ccc;
+}
+.form-select{
+    margin-bottom: 30px;
+}
+main{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.user_search{
+    border:2px solid black;
+    padding: 30px;
+    margin: 20px 0;
+}
